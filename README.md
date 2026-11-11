@@ -1,8 +1,5 @@
-# Alejandro Kamuchey Peón · Pasaporte
+# Alejandro Kamuchey Peón · Portfolio
 
-Portfolio personal (LEINN · Mondragon Team Academy) en forma de pasaporte interactivo.
+Digitalización, gestión y captación de talento joven para empresas de instalaciones y reformas.
 
-- Web: https://alejandrokamuchey.github.io/
-- PDF: `pasaporte-alejandro-kamuchey.pdf`
-
-HTML, CSS y JavaScript estáticos (Vue 3 incluido en `vendor/`). Sin paso de build.
+https://alejandrokamuchey.github.io/

@@ -3,534 +3,233 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alejandro Kamuchey Peón · Pasaporte</title>
-<meta name="description" content="Portfolio de Alejandro Kamuchey Peón (LEINN, Mondragon Team Academy): siete proyectos en forma de pasaporte interactivo.">
-<meta property="og:title" content="Alejandro Kamuchey Peón · Pasaporte">
-<meta property="og:description" content="Cuatro años, siete proyectos, un mismo pasaporte.">
-<meta property="og:image" content="assets/og.jpg">
+<title>Alejandro Kamuchey Peón · Portfolio</title>
+<meta name="description" content="Digitalización, gestión y captación de talento joven para empresas de instalaciones y reformas. Prácticas desde enero de 2027, 50 % obra y 50 % oficina, con foco en fontanería.">
+<meta property="og:title" content="Alejandro Kamuchey Peón">
+<meta property="og:description" content="Digitalización, gestión y captación de talento joven para empresas de instalaciones y reformas">
+<meta property="og:image" content="https://alejandrokamuchey.github.io/assets/og.jpg">
 <link rel="icon" href="assets/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;family=Cinzel:wght@500;700&amp;family=Martian+Mono:wght@400;600&amp;family=Nanum+Pen+Script&amp;display=swap">
 <style>
-
-body{margin:0;background:#3A1019}
-a{color:#D4B062} a:hover{color:#F6EEDA}
-::selection{background:#D4B062;color:#2A0B12}
-button{font:inherit;cursor:pointer}
-button:focus-visible,a:focus-visible{outline:2px solid #D4B062;outline-offset:3px}
-.stage{perspective:2400px;perspective-origin:50% 40%}
-.p3d{transform-style:preserve-3d}
-.float{animation:float 7s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0) rotateZ(0)}50%{transform:translateY(-10px) rotateZ(-.4deg)}}
-.book{position:relative;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.16,1,.3,1)}
-.slot{position:absolute;top:0;width:520px;height:680px;transform-style:preserve-3d}
-.face{position:absolute;inset:0;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden}
-.faceBack{transform:rotateY(180deg)}
-.leafR{transform-origin:left center}
-.leafL{transform-origin:right center}
-.flipNext{animation:flipNext .95s cubic-bezier(.45,.05,.2,1) both}
-.flipPrev{animation:flipPrev .95s cubic-bezier(.45,.05,.2,1) both}
-.flipNextN{animation:flipNextN .85s cubic-bezier(.45,.05,.2,1) both}
-.flipInN{animation:flipInN .85s cubic-bezier(.45,.05,.2,1) both}
-@keyframes flipNext{0%{transform:translateZ(1px) rotateY(0)}50%{transform:translateZ(40px) rotateY(-90deg)}100%{transform:translateZ(1px) rotateY(-180deg)}}
-@keyframes flipPrev{0%{transform:translateZ(1px) rotateY(0)}50%{transform:translateZ(40px) rotateY(90deg)}100%{transform:translateZ(1px) rotateY(180deg)}}
-@keyframes flipNextN{0%{transform:translateZ(1px) rotateY(0);opacity:1}70%{opacity:1}100%{transform:translateZ(1px) rotateY(-150deg);opacity:0}}
-@keyframes flipInN{0%{transform:translateZ(1px) rotateY(-150deg);opacity:0}30%{opacity:1}100%{transform:translateZ(1px) rotateY(0);opacity:1}}
-.shadeF,.shadeB,.cast{position:absolute;inset:0;pointer-events:none}
-.shadeF{animation:shadeF .95s ease-in-out both}
-.shadeB{animation:shadeB .95s ease-in-out both}
-@keyframes shadeF{0%{opacity:0}55%{opacity:1}100%{opacity:1}}
-@keyframes shadeB{0%{opacity:1}45%{opacity:1}100%{opacity:0}}
-.cast{animation:cast .95s ease-in-out both}
-@keyframes cast{0%{opacity:.0}45%{opacity:1}100%{opacity:0}}
-.paper{background-color:#E4EDE6;background-image:repeating-radial-gradient(circle at 24% 30%,rgba(31,74,156,.07) 0 1px,transparent 1px 9px),repeating-radial-gradient(circle at 78% 76%,rgba(75,58,158,.06) 0 1px,transparent 1px 12px)}
-.spineR{box-shadow:inset 26px 0 30px -22px rgba(30,42,42,.45)}
-.spineL{box-shadow:inset -26px 0 30px -22px rgba(30,42,42,.45)}
-.leather{background-color:#5C1B28;background-image:radial-gradient(rgba(0,0,0,.18) 1px,transparent 1.4px),radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.4px);background-size:5px 5px,7px 7px;background-position:0 0,3px 2px}
-.foil{color:#D9B866;text-shadow:0 1px 0 rgba(255,240,200,.35),0 -1px 0 rgba(0,0,0,.45)}
-.corner{position:absolute;bottom:0;width:78px;height:78px;border:0;padding:0;background:transparent;z-index:20}
-.corner span{position:absolute;bottom:0;width:30px;height:30px;transition:width .35s cubic-bezier(.16,1,.3,1),height .35s cubic-bezier(.16,1,.3,1)}
-.corner:hover span{width:64px;height:64px}
-.cornerR{right:0}.cornerR span{right:0;background:linear-gradient(135deg,#E4EDE6 0 49%,#B9C9BE 50%,#F3F7F3 72%,rgba(0,0,0,.18) 100%);border-top-left-radius:8px;box-shadow:-4px -4px 10px -4px rgba(0,0,0,.35)}
-.cornerL{left:0}.cornerL span{left:0;background:linear-gradient(225deg,#E4EDE6 0 49%,#B9C9BE 50%,#F3F7F3 72%,rgba(0,0,0,.18) 100%);border-top-right-radius:8px;box-shadow:4px -4px 10px -4px rgba(0,0,0,.35)}
-.stampWrap{position:absolute}
-.ink{filter:url(#ink)}
-.hand{font-family:'Nanum Pen Script',cursive;font-size:25px;line-height:1.02;color:#1F3A8A;margin:0}
-.pasteWrap{position:absolute;transition:transform .45s cubic-bezier(.16,1,.3,1)}
-.pasteWrap:hover{transform:translateY(-4px) scale(1.04)}
-.pasted{background:#FBFBF7;padding:7px 7px 9px;box-shadow:0 14px 20px -10px rgba(0,0,0,.45),0 2px 4px rgba(0,0,0,.14)}
-.pasted img{display:block;width:100%}
-.polaroid{padding:9px 9px 38px}
-.tape{position:absolute;width:88px;height:24px;background:rgba(236,222,164,.74);background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.18) 0 2px,transparent 2px 6px);box-shadow:0 1px 2px rgba(0,0,0,.12);border-left:2px dotted rgba(255,255,255,.5);border-right:2px dotted rgba(255,255,255,.5)}
-.stamp{filter:url(#ink);width:140px;min-height:100px;box-sizing:border-box;border:3px solid;border-radius:10px;background:transparent;padding:10px 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-family:'Archivo',sans-serif;font-stretch:72%;text-transform:uppercase;mix-blend-mode:multiply;transition:transform .3s cubic-bezier(.16,1,.3,1),filter .3s,box-shadow .3s}
-.stamp:hover{transform:translateY(-5px) scale(1.08);filter:url(#ink) saturate(1.6) contrast(1.15);box-shadow:0 14px 22px -14px rgba(30,42,42,.6)}
-.stamp:active{transform:scale(.94)}
-.stamp.round{border-radius:50%;width:128px;min-height:128px}
-.stamp.oval{border-radius:50%/42%;width:150px}
-.stamp.on{box-shadow:0 0 0 3px #E4EDE6,0 0 0 6px currentColor}
-.thunkA{animation:thunkA .5s cubic-bezier(.16,1,.3,1) both}
-.thunkB{animation:thunkB .5s cubic-bezier(.16,1,.3,1) both}
-@keyframes thunkA{from{transform:scale(1.9) rotate(-14deg);opacity:0;filter:blur(4px)}to{transform:scale(1) rotate(-5deg);opacity:1;filter:blur(0)}}
-@keyframes thunkB{from{transform:scale(1.9) rotate(-14deg);opacity:0;filter:blur(4px)}to{transform:scale(1) rotate(-5deg);opacity:1;filter:blur(0)}}
-.mrz{animation:type 1.5s steps(40) .6s both}
-@keyframes type{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
-.fld{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#4D5E58;font-weight:600}
-.val{font-size:17px;font-weight:700;color:#1E2A2A;text-transform:uppercase;font-stretch:86%}
-.pill{border:1px solid rgba(212,176,98,.55);background:transparent;color:#F6EEDA;border-radius:999px;padding:9px 16px;min-height:42px;font-weight:600;font-size:14px;transition:background .2s,color .2s}
-.pill:hover{background:rgba(212,176,98,.16)}
-.pill.on{background:#D4B062;color:#2A0B12;border-color:#D4B062}
-.hint{animation:hint 2.4s ease-in-out infinite}
-@keyframes hint{0%,100%{transform:translateX(0);opacity:.75}50%{transform:translateX(6px);opacity:1}}
-
-[v-cloak]{display:none}
+@font-face{font-family:Plex;font-style:normal;font-display:swap;font-weight:100 700;src:url(assets/plex-latin.woff2) format('woff2-variations');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--ink:#0F2340;--blue:#1D4F91;--blue2:#2B66B3;--yellow:#F2B705;--text:#18212B;--muted:#5A6878;--line:#D6DFEA;--soft:#EEF3F8;--bg:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:Plex,system-ui,sans-serif;color:var(--text);background:var(--bg);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+/* barra */
+.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{font-weight:650;color:var(--ink);text-decoration:none;letter-spacing:-.2px;white-space:nowrap}
+.brand i{display:inline-block;width:10px;height:10px;background:var(--yellow);margin-right:9px;vertical-align:1px}
+nav{display:flex;gap:22px;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:4px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--blue);transition:background .2s,color .2s,transform .2s}
+.btn.p{background:var(--blue);color:#fff}.btn.p:hover{background:var(--ink);border-color:var(--ink)}
+.btn.s{color:var(--blue);background:#fff}.btn.s:hover{background:var(--soft)}
+.btn:active{transform:translateY(1px)}
+.top .btn{padding:8px 14px;font-size:14px;gap:0}
+/* hero */
+.hero{padding:72px 0 56px;border-bottom:3px solid var(--blue);position:relative}
+.hero:after{content:"";position:absolute;bottom:-3px;left:max(24px,calc(50% - 516px));width:120px;height:3px;background:var(--yellow)}
+.hero .wrap{display:grid;grid-template-columns:1fr 280px;gap:56px;align-items:center}
+h1{font-size:clamp(38px,6vw,60px);line-height:1.03;letter-spacing:-1.5px;color:var(--ink);font-weight:650}
+.sub{margin-top:18px;font-size:clamp(19px,2.3vw,23px);line-height:1.35;color:var(--blue);font-weight:500;max-width:640px}
+.intro{margin-top:22px;max-width:620px;color:var(--text)}
+.cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.photo{position:relative}
+.photo img{width:100%;height:auto;aspect-ratio:520/670;object-fit:cover;border-radius:4px;display:block}
+.photo:before{content:"";position:absolute;inset:14px -14px -14px 14px;border:2px solid var(--yellow);border-radius:4px;z-index:-1}
+/* secciones */
+section{padding:76px 0}
+.eyebrow{font-size:13px;font-weight:650;letter-spacing:1.6px;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.eyebrow:before{content:"";width:22px;height:3px;background:var(--yellow)}
+h2{font-size:clamp(28px,3.6vw,38px);line-height:1.12;letter-spacing:-.8px;color:var(--ink);font-weight:650;max-width:760px}
+.lead{margin-top:14px;color:var(--muted);max-width:640px}
+/* busco */
+.busco{background:var(--soft)}
+.bgrid{margin-top:36px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px}
+.bar{display:flex;border-radius:4px;overflow:hidden;font-weight:650;font-size:15px}
+.bar div{flex:1;padding:14px 18px}.bar .o{background:var(--yellow);color:#2A2100}.bar .f{background:var(--blue);color:#fff}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.split div{padding:18px 18px 4px}
+.split b{display:block;color:var(--ink);margin-bottom:4px}
+.facts{list-style:none;border-top:1px solid var(--line)}
+.facts li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.facts b{color:var(--ink);font-weight:600}
+/* aporto */
+.give{list-style:none;margin-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.give li{background:#fff;padding:24px 22px 26px;display:flex;flex-direction:column;gap:8px}
+.give b{color:var(--ink);font-size:18px;font-weight:650;padding-top:12px;border-top:3px solid var(--yellow);align-self:flex-start}
+.give span{color:var(--muted);font-size:15.5px}
+/* casos */
+.cases{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.case{border:1px solid var(--line);border-radius:6px;padding:28px;background:#fff;transition:border-color .25s,box-shadow .25s,transform .25s}
+.case:hover{border-color:var(--blue2);box-shadow:0 10px 30px -18px rgba(15,35,64,.45);transform:translateY(-2px)}
+.ch{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;min-height:52px}
+.logo{height:44px;width:auto;max-width:170px;object-fit:contain;object-position:left}
+.logo.sm{height:28px;max-width:130px}
+.mono{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:4px;background:var(--ink);color:#fff;font-weight:650;font-size:15px;letter-spacing:.5px}
+.mini .mono{width:28px;height:28px;font-size:11px}
+.meta{text-align:right;font-size:13.5px;color:var(--muted);display:flex;flex-direction:column}
+.case h3{margin-top:18px;font-size:24px;color:var(--ink);letter-spacing:-.3px}
+.role{color:var(--blue);font-weight:600;font-size:15.5px}
+.fig{margin:18px 0 6px;display:flex;align-items:baseline;gap:10px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fig b{font-size:28px;color:var(--ink);font-weight:650;letter-spacing:-.5px;white-space:nowrap}
+.fig span{color:var(--muted);font-size:15px}
+dl dt{margin-top:16px;font-size:12.5px;font-weight:650;letter-spacing:1.2px;text-transform:uppercase;color:var(--blue)}
+dl dd{margin-top:4px;font-size:16px}
+dl dt:last-of-type{color:#8A6A00}
+.subh{margin-top:56px;font-size:20px;color:var(--ink)}
+.minis{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.mini{border-top:3px solid var(--ink);padding-top:16px}
+.mh{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:30px;font-size:13.5px;color:var(--muted)}
+.mini h3{margin:12px 0 6px;font-size:19px;color:var(--ink)}
+.mini p{font-size:15.5px}.mini .gv{margin-top:8px;color:var(--muted)}
+.mini .gv b{color:var(--ink)}
+/* formacion */
+.fgrid{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.fgrid h3{font-size:13px;letter-spacing:1.4px;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.fgrid p{margin-bottom:10px}.fgrid b{color:var(--ink)}
+/* contacto */
+.contact{background:var(--ink);color:#fff}
+.contact h2{color:#fff}.contact .eyebrow{color:#9DBDE6}.contact .lead{color:#C5D3E6}
+.contact .cta{margin-top:32px}
+.contact .btn.p{background:var(--yellow);border-color:var(--yellow);color:#2A2100}.contact .btn.p:hover{background:#fff;border-color:#fff}
+.contact .btn.s{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}.contact .btn.s:hover{background:rgba(255,255,255,.08)}
+footer{background:var(--ink);color:#8FA3BD;font-size:14px;padding:22px 0;border-top:1px solid rgba(255,255,255,.12)}
+/* animación */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.case:hover{transform:none}}
+/* móvil */
+@media (max-width:860px){
+ nav{display:none}
+ .hero{padding:40px 0 44px}
+ .hero .wrap{grid-template-columns:1fr;gap:32px}
+ .photo{order:-1;width:150px}
+ .photo:before{inset:8px -8px -8px 8px}
+ .bgrid,.cases,.minis,.fgrid{grid-template-columns:1fr}
+ section{padding:56px 0}
+ .facts li{grid-template-columns:1fr;gap:2px}
+ .case{padding:22px}
+}
+@media (max-width:420px){.wrap{padding:0 16px}.top .btn span{display:none}.split{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div id="app" v-cloak></div>
-<script type="text/x-template" id="tpl">
+<header class="top"><div class="wrap">
+  <a class="brand" href="#inicio"><i></i>Alejandro Kamuchey</a>
+  <nav><a href="#busco">Qué busco</a><a href="#aporto">Qué aporto</a><a href="#proyectos">Proyectos</a><a href="#formacion">Formación</a><a href="#contacto">Contacto</a></nav>
+  <a class="btn p" href="cv-alejandro-kamuchey.pdf" download>CV<span>&nbsp;en PDF</span></a>
+</div></header>
 
-<div style="font-family: 'Archivo', sans-serif; color: #F6EEDA; background: radial-gradient(120% 90% at 50% 20%, #5A1A26 0%, #3A1019 60%, #2A0B12 100%); min-height: 100vh; overflow: hidden">
-<main style="max-width: 1180px; margin: 0 auto; padding: 26px 20px 48px; box-sizing: border-box">
+<div class="hero" id="inicio"><div class="wrap">
+  <div>
+    <h1>Alejandro Kamuchey Peón</h1>
+    <p class="sub">Digitalización, gestión y captación de talento joven para empresas de instalaciones y reformas</p>
+    <p class="intro">Estudiante de último curso de LEINN en Mondragon Unibertsitatea. Llevo cuatro años montando proyectos reales con clientes, equipos y software, y ahora quiero aprender un oficio desde dentro: la fontanería. Mi reto es ayudar a las pymes de instalaciones y reformas a digitalizar su día a día y a atraer gente joven al gremio. Todavía no tengo experiencia en obra: por eso quiero empezar ahí.</p>
+    <div class="cta"><a class="btn p" href="cv-alejandro-kamuchey.pdf" download>Descargar CV</a><a class="btn s" href="#contacto">Escríbeme</a></div>
+  </div>
+  <div class="photo"><img src="assets/foto.jpg" alt="Alejandro Kamuchey Peón" width="520" height="670"></div>
+</div></div>
 
-<header style="display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; justify-content: space-between">
-<div style="display: flex; flex-direction: column; gap: 4px">
-<h1 style="margin: 0; font-family: 'Cinzel', serif; font-weight: 700; font-size: 28px; letter-spacing: .06em; color: #D4B062">Alejandro Kamuchey Peón</h1>
-<p style="margin: 0; font-size: 15px; color: #EAD9BC; max-width: 62ch">{{t.tagline}}</p>
-</div>
-<div role="group" aria-label="Idioma / Language" style="display: flex; gap: 4px">
-<button :class="esCls" @click="setEs" :aria-pressed="isEs">ES</button>
-<button :class="enCls" @click="setEn" :aria-pressed="isEn">EN</button>
-</div>
-</header>
+<section class="busco" id="busco"><div class="wrap">
+  <div class="eyebrow">Qué busco</div>
+  <h2>Prácticas desde enero de 2027, mitad en obra y mitad en oficina.</h2>
+  <div class="bgrid">
+    <div class="reveal">
+      <div class="bar"><div class="o">50 % Obra</div><div class="f">50 % Oficina</div></div>
+      <div class="split">
+        <div><b>Obra</b>Aprender junto a los oficiales, con foco en fontanería.</div>
+        <div><b>Oficina</b>Digitalizar presupuestos, partes de obra y planificación, web y presencia online, y captación y retención de talento joven.</div>
+      </div>
+    </div>
+    <ul class="facts reveal">
+      <li><b>Empresa</b><span>Pyme de instalaciones y reformas que enseñe de verdad y esté abierta a digitalizarse.</span></li>
+      <li><b>Dónde</b><span>Bilbao y alrededores, o Asturias (Gijón).</span></li>
+      <li><b>Formación</b><span>Certificado de profesionalidad de fontanería y curso de prevención TPC (60 h).</span></li>
+      <li><b>Retribución</b><span>La propia de un convenio de prácticas.</span></li>
+    </ul>
+  </div>
+</div></section>
 
-<nav :aria-label="t.pagesLabel" style="display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 22px">
-<template v-for="(tb, $index) in tabs">
-<button :class="tb.cls" @click="tb.go">{{tb.label}}</button>
-</template>
-</nav>
+<section id="aporto"><div class="wrap">
+  <div class="eyebrow">Qué aporto</div>
+  <h2>Lo que puedo hacer en tu empresa desde el primer día.</h2>
+  <ul class="give"><li class="reveal"><b>Digitalización</b><span>Creo herramientas digitales y webs para negocios locales, con IA aplicada, Excel y Google Sheets.</span></li><li class="reveal"><b>Trato con el cliente</b><span>Clientes reales y recurrentes desde primero de carrera: colegios, restaurantes y centros educativos.</span></li><li class="reveal"><b>Equipos y personas</b><span>Bienestar y comunicación en un equipo de 14 personas; más de 400 jóvenes formados en liderazgo.</span></li><li class="reveal"><b>Talento joven</b><span>Trabajo con gente de 15 a 25 años: sé qué les mueve y cómo se les forma.</span></li><li class="reveal"><b>Sector vivienda</b><span>Estudio de mercado sobre vivienda cooperativa entre Nueva York y el País Vasco, presentado en ASETT.</span></li></ul>
+</div></section>
 
-<div class="stage" @mousemove="onMove" @mouseleave="onLeave" :style="'position: relative; height: ' + (stageH) + 'px; margin-top: 26px'">
-<div class="p3d" :style="'position: absolute; left: 50%; top: 0; width: ' + (bookW) + 'px; height: 680px; transform: translateX(-50%) scale(' + (scale) + '); transform-origin: top center'">
-<div :class="floatCls" style="width: 100%; height: 100%">
-<div class="book" :style="'width: ' + (bookW) + 'px; height: 680px; transform: translateX(' + (shift) + 'px) rotateX(' + (tx) + 'deg) rotateY(' + (ty) + 'deg)'">
+<section id="proyectos" style="padding-top:0"><div class="wrap">
+  <div class="eyebrow">Proyectos</div>
+  <h2>Qué he hecho y qué le sirve de ello a una empresa de reformas.</h2>
+  <div class="cases">
+<article class="case reveal">
+  <div class="ch"><img class="logo" src="assets/ascend-logo.png" alt="ASCEND"><div class="meta"><span>Bilbao · India · Corea</span><span>2025 – actualidad</span></div></div>
+  <h3>ASCEND</h3><div class="role">Fundador y director, con María Ruiz Ramos</div>
+  <div class="fig"><b>+400</b><span>jóvenes formados</span></div>
+  <dl><dt>Qué hice</dt><dd>Programa experiencial de liderazgo y soft skills con drones para jóvenes de 15 a 25 años. Diseñamos la metodología, facilitamos las sesiones y buscamos centros, también en India y Seúl.</dd><dt>Qué aporta a tu empresa</dt><dd>Sé formar a gente joven y sacar lo mejor de un equipo: cómo se acompaña a alguien que empieza y qué hace que se quede. Es la base para atraer y retener aprendices en la empresa.</dd></dl>
+</article>
+<article class="case reveal">
+  <div class="ch"><img class="logo" src="assets/posta-iso.png" alt="POSTA"><div class="meta"><span>Bilbao</span><span>2025 – actualidad</span></div></div>
+  <h3>POSTA</h3><div class="role">Fundador</div>
+  <div class="fig"><b>+11 %</b><span>margen recuperado al mes</span></div>
+  <dl><dt>Qué hice</dt><dd>Consultoría de reparto y logística para restaurantes. Piloto en Lock Burger con flota propia, integrado con Last.app y Lymon para que cada pedido entre y se asigne solo.</dd><dt>Qué aporta a tu empresa</dt><dd>Sé entrar en un negocio tradicional, escuchar al dueño y ordenar un proceso para que deje más margen. Es lo que quiero hacer con los presupuestos, los partes de obra y la planificación.</dd></dl>
+</article>
+<article class="case reveal">
+  <div class="ch"><img class="logo" src="assets/rename-logo.png" alt="RENAME"><div class="meta"><span>Bilbao</span><span>2026</span></div></div>
+  <h3>RENAME</h3><div class="role">Fundador</div>
+  <div class="fig"><b>BIME</b><span>finalistas de BIME Startup</span></div>
+  <dl><dt>Qué hice</dt><dd>Software de gestión financiera para músicos emergentes: un panel que une sus ingresos y dice cuánto han ganado y cuándo cobran. Definí el producto, construí la demo y lo presenté.</dd><dt>Qué aporta a tu empresa</dt><dd>Sé convertir un problema de gestión en una herramienta digital sencilla. En una pyme de reformas, eso es saber en cada obra lo presupuestado, lo gastado y lo pendiente de cobrar.</dd></dl>
+</article>
+<article class="case reveal">
+  <div class="ch"><img class="logo" src="assets/rivia-logo.png" alt="Rivia"><div class="meta"><span>Bilbao</span><span>2023 – actualidad</span></div></div>
+  <h3>Rivia</h3><div class="role">Bienestar y comunicación</div>
+  <div class="fig"><b>14</b><span>personas en el equipo</span></div>
+  <dl><dt>Qué hice</dt><dd>Nuestra junior empresa de LEINN: un equipo que lanza proyectos reales al mercado. Llevo el cuidado del equipo por dentro y su comunicación hacia fuera, y preparé parte del Método RIVIA de negociación.</dd><dt>Qué aporta a tu empresa</dt><dd>Sé trabajar en un equipo de verdad, con roles, plazos y conflictos, y cuidar a la gente. Lo necesito para encajar en una cuadrilla y para ayudar a que la empresa comunique mejor.</dd></dl>
+</article></div>
+  <h3 class="subh">Otras experiencias</h3>
+  <div class="minis">
+<article class="mini reveal">
+  <div class="mh"><span class="mono">VC</span><span>Nueva York · Donostia</span></div>
+  <h3>Vivienda cooperativa</h3><p>Estudio de mercado sobre la vivienda cooperativa en Estados Unidos y el País Vasco para empresas y asociaciones del sector. Entrevistas, análisis comparado y presentación en ASETT.</p><p class="gv"><b>Aporta:</b> Conozco el mercado de la vivienda y sé investigar un sector hablando con quienes trabajan en él.</p>
+</article>
+<article class="mini reveal">
+  <div class="mh"><img class="logo sm" src="assets/bilbodrones-logo.png" alt="Bilbo Drones"><span>Bilbao · 1.º de carrera</span></div>
+  <h3>Bilbo Drones</h3><p>Diseñaba e impartía cursos de dron para niños y colegios. Mi primer proyecto con clientes reales y recurrentes.</p><p class="gv"><b>Aporta:</b> Sé cuidar a un cliente para que repita.</p>
+</article>
+<article class="mini reveal">
+  <div class="mh"><span class="mono">AM</span><span>Berlín</span></div>
+  <h3>Automodell</h3><p>Réplicas en maqueta de coches de alta gama, hechas a medida. Llevé las ventas, el trato con los clientes y la coordinación del equipo.</p><p class="gv"><b>Aporta:</b> Sé vender un trabajo a medida a un cliente exigente, como una reforma.</p>
+</article></div>
+</div></section>
 
-<svg width="0" height="0" style="position: absolute" aria-hidden="true"><defs><filter id="ink" x="-4%" y="-4%" width="108%" height="108%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" result="n"></feTurbulence><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.7 1.55" result="m"></feColorMatrix><feComposite in="SourceGraphic" in2="m" operator="in"></feComposite></filter></defs></svg>
-<div aria-hidden="true" :style="'position: absolute; left: ' + (shadowL) + 'px; width: ' + (shadowW) + 'px; bottom: -46px; height: 60px; border-radius: 50%; background: rgba(0,0,0,.55); filter: blur(22px); transform: translateZ(-80px) translateX(' + (shadowX) + 'px); transition: left .6s, width .6s'"></div>
-<template v-for="(e, $index) in edges">
-<div aria-hidden="true" :style="'position: absolute; top: ' + (e.y) + 'px; left: ' + (e.x) + 'px; width: 520px; height: 680px; border-radius: ' + (e.rad) + '; background: ' + (e.bg) + '; transform: translateZ(' + (e.z) + 'px); box-shadow: 0 1px 0 rgba(0,0,0,.15)'"></div>
-</template>
+<section class="busco" id="formacion"><div class="wrap">
+  <div class="eyebrow">Formación y herramientas</div>
+  <div class="fgrid">
+    <div class="reveal"><h3>Formación</h3><p><b>Grado en LEINN</b><br>Liderazgo Emprendedor e Innovación. Mondragon Unibertsitatea, 4.º curso (fin: junio de 2027).</p><p><b>Fontanería</b><br>Objetivo 2027: certificado de profesionalidad.</p></div>
+    <div class="reveal"><h3>Herramientas</h3><p>Claude e IA<br>Excel y Google Sheets<br>Canva y edición de vídeo</p></div>
+    <div class="reveal"><h3>Idiomas</h3><p>Español: nativo<br>Inglés: nativo</p></div>
+  </div>
+</div></section>
 
-<template v-for="(sl, $index) in slots">
-<template v-if="sl.show">
-<div :class="sl.cls" :style="'left: ' + (sl.x) + 'px'">
-<div :class="sl.faceCls" :style="'border-radius: ' + (sl.rad) + '; color: #1E2A2A'">
-
-<template v-if="sl.isCover">
-<div class="leather" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; text-align: center; padding: 40px; box-sizing: border-box">
-<p class="foil" style="margin: 0; font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: .32em">LEINN · MONDRAGON TEAM ACADEMY</p>
-<svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#D9B866" stroke-width="2" aria-hidden="true"><circle cx="60" cy="60" r="54"></circle><circle cx="60" cy="60" r="42"></circle><path d="M18 60h84M60 18c-16 18-16 66 0 84M60 18c16 18 16 66 0 84M26 38h68M26 82h68"></path><path d="M46 60l14-14 14 14-14 14z" fill="#D9B866" fill-opacity=".25"></path></svg>
-<p class="foil" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 700; font-size: 54px; letter-spacing: .12em; line-height: 1">PASAPORTE</p>
-<p class="foil" style="margin: 0; font-family: 'Cinzel', serif; font-size: 20px; letter-spacing: .42em">PASSPORT</p>
-<svg width="46" height="30" viewBox="0 0 46 30" fill="none" stroke="#D9B866" stroke-width="2" aria-hidden="true"><rect x="1" y="1" width="44" height="28" rx="2"></rect><circle cx="23" cy="15" r="7"></circle><path d="M1 15h15M30 15h15"></path></svg>
-<p class="hint" style="margin: 8px 0 0; font-size: 13px; color: #EAD9BC">{{t.openHint}} →</p>
-</div>
-<div aria-hidden="true" :style="'position: absolute; inset: 0; background: radial-gradient(circle at ' + (gx) + '% ' + (gy) + '%, rgba(255,226,160,.28), transparent 42%); mix-blend-mode: overlay; pointer-events: none'"></div>
-</template>
-
-<template v-if="sl.isInside">
-<div :class="sl.paperCls" style="position: absolute; inset: 0; padding: 44px 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
-<p style="margin: 0; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: .2em; color: #6B2633">PASAPORTE · PASSPORT</p>
-<h2 style="margin: 0; font-size: 38px; line-height: 1.06; font-weight: 800; font-stretch: 80%; letter-spacing: -.01em; text-wrap: balance">{{t.intro}}</h2>
-<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #33423D">{{t.introBody}}</p>
-<button @click="goVisas" style="align-self: flex-start; border: 0; background: #6B2633; color: #F6EEDA; padding: 13px 22px; border-radius: 999px; font-weight: 700; font-size: 15px; min-height: 46px">{{t.seeVisas}}</button>
-<div class="pasteWrap" style="right: 40px; bottom: 92px; width: 236px"><div class="pasted polaroid" style="transform: rotate(-4deg)"><img src="assets/bime-escenario.jpg" :alt="t.photoAlt" style="height: 150px; object-fit: cover"><p class="hand" style="position: absolute; left: 12px; bottom: 6px; font-size: 22px">{{t.polaroid}}</p><span class="tape" style="left: 74px; top: -12px; transform: rotate(-5deg)"></span></div></div>
-<p style="margin: auto 0 0; font-size: 12px; color: #4D5E58; line-height: 1.5; max-width: 22ch">{{t.notice}}</p>
-</div>
-</template>
-
-<template v-if="sl.isDatos">
-<div :class="sl.paperCls" style="position: absolute; inset: 0; padding: 36px 34px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px">
-<div style="display: flex; justify-content: space-between; font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: .16em; color: #6B2633"><span>PASAPORTE · PASSPORT</span><span>TIPO P · LEI</span></div>
-<div style="display: flex; gap: 18px">
-<img src="assets/foto.jpg" alt="Alejandro Kamuchey Peón" style="flex: 0 0 132px; width: 132px; height: 170px; object-fit: cover; border-radius: 8px; filter: saturate(.85) contrast(1.05); border: 1px solid rgba(30,42,42,.2)">
-<div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 8px">
-<template v-for="(f, $index) in fields">
-<div><div class="fld">{{f.label}}</div><div class="val">{{f.value}}</div></div>
-</template>
-</div>
-</div>
-<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 12px">
-<div><div class="fld">Firma · Signature</div><div style="width: 200px; height: 40px; border-bottom: 1.5px solid #1E2A2A"><svg width="190" height="40" viewBox="0 0 190 40" fill="none" stroke="#1F2F6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 32c6-10 12-22 16-26 2 8 4 18 6 26M12 22h14"></path><path d="M34 28c3-6 6-8 8-6s-2 8 2 8 6-10 9-10-2 9 2 9 5-6 7-9"></path><path d="M70 6c-2 10-4 18-5 26M66 20c6-4 10-6 12-6M66 22c4 3 8 7 12 9"></path><path d="M82 26c3-5 7-6 7-2s-4 5-1 5 5-6 7-6 0 6 3 6 4-7 6-7-1 7 2 7c4 0 6-9 10-14"></path><path d="M120 24c4-3 7-2 6 2s-5 5-2 6 9-4 14-10"></path><path d="M30 37c40-4 90-6 150-10"></path></svg></div></div>
-<div style="display: flex; align-items: flex-end; gap: 12px"><img src="assets/foto.jpg" alt="" aria-hidden="true" style="width: 46px; height: 58px; object-fit: cover; filter: grayscale(1) contrast(1.4); opacity: .28; mix-blend-mode: multiply; border-radius: 4px"><div class="fld" style="text-align: right">Expedido · Issued<br>Bilbao · 2026</div></div>
-</div>
-<div style="margin-top: auto; background: rgba(255,255,255,.6); border-radius: 6px; padding: 12px 12px; font-family: 'Martian Mono', monospace; font-size: 12.5px; letter-spacing: .06em">
-<div class="mrz" style="white-space: pre">P&lt;LEIKAMUCHEY&lt;PEON&lt;&lt;ALEJANDRO&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</div>
-<div class="mrz" style="white-space: pre; animation-delay: 1.5s">ASCEND&lt;POSTA&lt;RENAME&lt;RIVIA&lt;&lt;&lt;&lt;</div>
-</div>
-</div>
-<div aria-hidden="true" :style="'position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, transparent 32%, rgba(255,140,220,.22) 44%, rgba(140,230,255,.22) 52%, rgba(255,240,150,.18) 60%, transparent 72%); background-size: 260% 260%; background-position: ' + (holoX) + '% ' + (holoY) + '%; mix-blend-mode: screen'"></div>
-</template>
-
-<template v-if="sl.isVisas">
-<div :class="sl.paperCls" style="position: absolute; inset: 0; padding: 34px 34px; box-sizing: border-box">
-<h2 style="margin: 0 0 4px; font-family: 'Cinzel', serif; font-size: 22px; letter-spacing: .1em; color: #6B2633">VISADOS · VISAS</h2>
-<p style="margin: 0; font-size: 14px; color: #33423D">{{t.visasHint}}</p>
-<div style="position: relative; height: 520px; margin-top: 12px">
-<template v-for="(s, $index) in stamps">
-<div class="stampWrap" :style="'left: ' + (s.x) + 'px; top: ' + (s.y) + 'px; transform: rotate(' + (s.r) + 'deg)'">
-<button :class="s.cls" @click="s.pick" :aria-pressed="s.on" :style="'color: ' + (s.ink) + '; border-color: ' + (s.ink)">
-<template v-if="s.hasIso"><img :src="s.iso" alt="" aria-hidden="true" :style="'height: ' + (s.isoH) + 'px; max-width: 100px; object-fit: contain; mix-blend-mode: multiply; margin-bottom: 2px'"></template>
-<span style="font-size: 10px; font-weight: 600; letter-spacing: .08em">{{s.kind}}</span>
-<span :style="'font-size: ' + (s.size) + 'px; font-weight: 800; line-height: 1'">{{s.name}}</span>
-<span style="font-family: 'Martian Mono', monospace; font-size: 10px">{{s.date}}</span>
-</button>
-</div>
-</template>
-</div>
-</div>
-</template>
-
-<template v-if="sl.isVisa">
-<div :class="sl.paperCls" style="position: absolute; inset: 0; padding: 34px 34px; box-sizing: border-box">
-<div style="position: relative; z-index: 2; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: center; gap: 14px; min-height: 70px">
-<template v-if="sl.p.wordmark"><div style="display: flex; align-items: center; font-weight: 900; font-size: 54px; letter-spacing: -.02em; color: #0E0E10; line-height: 1">P<img src="assets/posta-iso.png" alt="" aria-hidden="true" style="height: 44px; margin: 0 2px">STA</div></template>
-<template v-if="sl.p.hasLogo"><img :src="sl.p.logoUrl" :alt="sl.p.name" :style="'height: ' + (sl.p.logoH) + 'px; max-width: 230px; object-fit: contain; mix-blend-mode: multiply'"></template>
-<div class="thunkA" :style="'margin-left: auto; border: 4px double ' + (sl.p.ink) + '; color: ' + (sl.p.ink) + '; border-radius: 12px; padding: 8px 14px; text-align: center; text-transform: uppercase; font-stretch: 70%; mix-blend-mode: multiply'">
-<div class="ink">
-<div style="font-size: 10px; font-weight: 700; letter-spacing: .1em">{{sl.p.kind}}</div>
-<div :style="'font-size: ' + (sl.p.stampSize) + 'px; font-weight: 800; line-height: .95'">{{sl.p.name}}</div>
-<div style="font-family: 'Martian Mono', monospace; font-size: 10px; margin-top: 3px">{{sl.p.date}}</div>
-</div>
-</div>
-</div>
-<div><div class="fld">Motivo del viaje · Purpose of visit</div><div style="font-size: 19px; font-weight: 700; margin-top: 2px">{{sl.p.role}}</div></div>
-<div><div class="fld">Qué es · What it is</div><p style="margin: 4px 0 0; font-size: 15.5px; line-height: 1.5">{{sl.p.what}}</p></div>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 16px; padding-top: 12px; border-top: 1px solid rgba(30,42,42,.18)">
-<template v-for="(fg, $index) in sl.p.figsL">
-<div><div :style="'font-size: 34px; font-weight: 800; font-stretch: 75%; color: ' + (sl.p.fig) + '; line-height: 1'">{{fg.v}}</div><div style="font-size: 13.5px; color: #33423D; margin-top: 2px">{{fg.l}}</div></div>
-</template>
-</div>
-</div>
-<template v-if="sl.p.hasPaste">
-<div class="pasteWrap" :style="'right: 30px; bottom: 44px; width: ' + (sl.p.pw) + 'px'"><div class="pasted" :style="'transform: rotate(' + (sl.p.pr) + 'deg)'"><img :src="sl.p.pasteUrl" :alt="sl.p.name"><span class="tape" style="left: 30%; top: -12px; transform: rotate(-6deg)"></span></div></div>
-</template>
-<template v-if="sl.p.hasNote">
-<p class="hand" style="position: absolute; left: 34px; bottom: 46px; max-width: 200px; transform: rotate(-3deg)">{{sl.p.note}}</p>
-</template>
-</div>
-</template>
-
-<template v-if="sl.isReport">
-<div :class="sl.paperCls" style="position: absolute; inset: 0; padding: 32px 34px 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
-<div :style="'display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-bottom: 1.5px solid ' + (sl.p.ink) + '; padding-bottom: 8px'">
-<h2 style="margin: 0; font-family: 'Cinzel', serif; font-size: 17px; letter-spacing: .12em; color: #6B2633">INFORME · REPORT</h2>
-<span :style="'font-weight: 800; font-size: 17px; font-stretch: 75%; letter-spacing: .04em; color: ' + (sl.p.ink)">{{sl.p.name}}</span>
-</div>
-<div><div class="fld">El problema · The problem</div><p style="margin: 3px 0 0; font-size: 14.5px; line-height: 1.45">{{sl.p.problem}}</p></div>
-<div><div class="fld">Qué hicimos · What we did</div>
-<ol style="margin: 5px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 7px">
-<template v-for="(st, $index) in sl.p.stepsL">
-<li style="display: flex; gap: 10px; align-items: baseline"><span :style="'flex: 0 0 auto; font-family: \'Martian Mono\', monospace; font-size: 11px; font-weight: 600; color: ' + (sl.p.ink)">{{st.n}}</span><span style="font-size: 14px; line-height: 1.42">{{st.t}}</span></li>
-</template>
-</ol></div>
-<div><div class="fld">Mi papel · My role</div><p style="margin: 3px 0 0; font-size: 14.5px; line-height: 1.45">{{sl.p.myrole}}</p></div>
-<div><div class="fld">Resultado · Result</div><p style="margin: 3px 0 0; font-size: 14.5px; line-height: 1.45; font-weight: 600">{{sl.p.result}}</p></div>
-<div style="margin-top: auto"><div class="fld">Lo que aprendí · What I learned</div><div class="hand" style="min-height: 84px; margin-top: 4px; font-size: 23px; line-height: 28px; background-image: repeating-linear-gradient(transparent 0 27px, rgba(31,58,138,.22) 27px 28px)">{{sl.p.learn}}</div></div>
-</div>
-</template>
-
-<template v-if="sl.isRuta">
-<div :class="sl.paperCls" style="position: absolute; inset: 0; padding: 34px 34px; box-sizing: border-box">
-<h2 style="margin: 0 0 6px; font-family: 'Cinzel', serif; font-size: 22px; letter-spacing: .1em; color: #6B2633">{{t.routeTitle}}</h2>
-<p style="margin: 0 0 20px; font-size: 14px; color: #33423D">{{sl.routeHint}}</p>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 18px">
-<template v-for="(c, $index) in sl.route">
-<div :style="'border: 2px solid ' + (c.ink) + '; color: ' + (c.ink) + '; border-radius: 6px; padding: 12px 12px; min-height: 120px; box-sizing: border-box; transform: rotate(' + (c.r) + 'deg); mix-blend-mode: multiply; text-transform: uppercase; font-stretch: 75%; filter: url(#ink)'">
-<div style="display: flex; justify-content: space-between; font-size: 10px; font-weight: 700; letter-spacing: .08em"><span>Entrada · Entry</span><span style="font-family: 'Martian Mono', monospace">{{c.when}}</span></div>
-<div style="font-size: 27px; font-weight: 800; line-height: 1.05; margin-top: 6px">{{c.city}}</div>
-<div style="font-size: 13px; font-weight: 600; margin-top: 4px; text-transform: none; color: #33423D">{{c.note}}</div>
-</div>
-</template>
-</div>
-</div>
-</template>
-
-<template v-if="sl.isValores">
-<div :class="sl.paperCls" style="position: absolute; inset: 0; padding: 34px 36px; box-sizing: border-box">
-<h2 style="margin: 0 0 18px; font-family: 'Cinzel', serif; font-size: 22px; letter-spacing: .1em; color: #6B2633">{{t.valuesTitle}}</h2>
-<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 16px">
-<template v-for="(v, $index) in values">
-<li style="border-bottom: 1px solid rgba(30,42,42,.18); padding-bottom: 12px"><div style="font-size: 22px; font-weight: 800; font-stretch: 85%">{{v.name}}</div><div style="font-size: 15px; color: #33423D; margin-top: 2px">{{v.line}}</div></li>
-</template>
-</ol>
-</div>
-</template>
-
-<template v-if="sl.isSkills">
-<div :class="sl.paperCls" style="position: absolute; inset: 0; padding: 34px 36px; box-sizing: border-box">
-<h2 style="margin: 0 0 18px; font-family: 'Cinzel', serif; font-size: 22px; letter-spacing: .1em; color: #6B2633">{{t.skillsTitle}}</h2>
-<div style="display: flex; flex-wrap: wrap; gap: 12px">
-<template v-for="(k, $index) in skills">
-<span :style="'border: 2px solid ' + (k.ink) + '; color: ' + (k.ink) + '; border-radius: 6px; padding: 7px 11px; font-weight: 700; font-size: 14px; text-transform: uppercase; font-stretch: 78%; transform: rotate(' + (k.r) + 'deg); mix-blend-mode: multiply; filter: url(#ink)'">{{k.name}}</span>
-</template>
-</div>
-</div>
-</template>
-
-<template v-if="sl.isContacto">
-<div :class="sl.paperCls" style="position: absolute; inset: 0; padding: 44px 40px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; gap: 22px">
-<h2 style="margin: 0; font-family: 'Cinzel', serif; font-weight: 700; font-size: 46px; line-height: 1.05; color: #6B2633">{{t.contactTitle}}</h2>
-<div style="display: flex; flex-direction: column; gap: 14px; font-size: 16px">
-<div><div class="fld">Email</div><a href="mailto:alejandroalberto.kam@alumni.mondragon.edu" style="color: #1F4A9C; font-weight: 700; word-break: break-all">alejandroalberto.kam@alumni.mondragon.edu</a></div>
-<div><div class="fld">LinkedIn</div><a href="https://www.linkedin.com/in/alejandro-kamuchey-pe%C3%B3n-760b19294/" target="_blank" rel="noopener" style="color: #1F4A9C; font-weight: 700">Alejandro Kamuchey Peón</a></div>
-<div><div class="fld">{{t.baseLabel}}</div><span style="font-weight: 700">Bilbao</span></div>
-</div>
-<a href="pasaporte-alejandro-kamuchey.pdf" download style="align-self: flex-start; background: #6B2633; color: #F6EEDA; border-radius: 999px; padding: 12px 20px; text-decoration: none; font-weight: 700">{{t.pdf}}</a>
-</div>
-</template>
-
-<template v-if="sl.isBack">
-<div class="leather" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; text-align: center; padding: 40px; box-sizing: border-box">
-<p class="foil" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 700; font-size: 40px; letter-spacing: .08em">{{t.thanks}}</p>
-<p style="margin: 0; font-size: 15px; color: #EAD9BC; max-width: 30ch; line-height: 1.5">{{t.backLine}}</p>
-<button @click="goCover" style="margin-top: 6px; border: 1.5px solid #D9B866; background: transparent; color: #F6EEDA; border-radius: 999px; padding: 12px 22px; font-weight: 700; font-size: 15px; min-height: 46px">{{t.backBtn}}</button>
-</div>
-</template>
-
-<template v-if="sl.isBlank">
-<div class="paper spineL" style="position: absolute; inset: 0"></div>
-</template>
-
-<template v-if="sl.num">
-<div aria-hidden="true" style="position: absolute; bottom: 14px; left: 0; right: 0; text-align: center; font-family: 'Martian Mono', monospace; font-size: 11px; color: #4D5E58">{{sl.num}}</div>
-</template>
-<div :class="sl.shadeCls" aria-hidden="true" :style="'background: ' + (sl.shadeBg)"></div>
-</div>
-</div>
-</template>
-</template>
-
-<template v-if="canNextCorner">
-<button class="corner cornerR" @click="next" :aria-label="t.next" :style="'left: ' + (cornerRX) + 'px; transform: translateZ(4px)'"><span></span></button>
-</template>
-<template v-if="canPrevCorner">
-<button class="corner cornerL" @click="prev" :aria-label="t.prev" style="transform: translateZ(4px)"><span></span></button>
-</template>
-<div aria-hidden="true" :style="'position: absolute; top: 0; bottom: 0; left: ' + (glareL) + 'px; width: ' + (glareW) + 'px; pointer-events: none; border-radius: 14px; background: radial-gradient(circle at ' + (gx) + '% ' + (gy) + '%, rgba(255,255,255,.16), transparent 48%); mix-blend-mode: soft-light; transform: translateZ(6px)'"></div>
-</div>
-</div>
-</div>
-</div>
-
-<div style="display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 8px">
-<button class="pill" @click="prev">← {{t.prev}}</button>
-<span style="font-family: 'Martian Mono', monospace; font-size: 13px; color: #EAD9BC; min-width: 9ch; text-align: center">{{counter}}</span>
-<button class="pill" @click="next">{{t.next}} →</button>
-</div>
-<p style="margin: 14px 0 0; text-align: center; font-size: 13px; color: #CDB38C">{{t.tip}}</p>
-</main>
-</div>
-
-</script>
-<script src="vendor/vue.global.prod.js"></script>
+<section class="contact" id="contacto"><div class="wrap">
+  <div class="eyebrow">Contacto</div>
+  <h2>¿Tienes una empresa de instalaciones o reformas? Hablemos.</h2>
+  <p class="lead">Bilbao, Bizkaia · Gijón, Asturias</p>
+  <div class="cta">
+    <a class="btn p" href="cv-alejandro-kamuchey.pdf" download>Descargar CV</a>
+    <a class="btn s" href="mailto:alejandroalberto.kam@alumni.mondragon.edu">alejandroalberto.kam@alumni.mondragon.edu</a>
+    <a class="btn s" href="tel:+34644259621">+34 644 259 621</a>
+    <a class="btn s" href="https://www.linkedin.com/in/alejandro-kamuchey-pe%C3%B3n-760b19294/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</div></section>
+<footer><div class="wrap">Alejandro Kamuchey Peón · 2026</div></footer>
 <script>
-class DCLogic { constructor(props) { this.props = props || {}; } setState(o) { Object.assign(this.state, typeof o === 'function' ? o(this.state) : o); } forceUpdate() {} }
-
-class Component extends DCLogic {
-  constructor(p) {
-    super(p);
-    this.state = { lang: 'es', k: 0, i: 0, flip: null, sel: null, n: 0, tx: 0, ty: 0, gx: 50, gy: 30, hover: false, vw: 1280 };
-    this.raf = 0;
-    this.onResize = () => this.setState({ vw: window.innerWidth });
-  }
-  componentDidMount() { this.onResize(); window.addEventListener('resize', this.onResize); }
-  componentWillUnmount() { window.removeEventListener('resize', this.onResize); cancelAnimationFrame(this.raf); }
-  renderVals() {
-    const s = this.state, es = s.lang === 'es';
-    const T = es ? {
-      tagline: 'Construyo proyectos entre lo digital y lo físico. 4.º de LEINN en Mondragon Team Academy.',
-      openHint: 'Pasa la tapa para abrirlo', pagesLabel: 'Páginas', prev: 'Anterior', next: 'Siguiente',
-      intro: 'Cuatro años, siete proyectos, un mismo pasaporte.',
-      introBody: 'Formación con drones, logística, software para músicos y proyectos en Berlín, Nueva York, India y Seúl. Cada visado es un proyecto en el que he trabajado, montado o liderado.',
-      seeVisas: 'Ir a mis visados', polaroid: 'BIME Startup', photoAlt: 'Presentando RENAME en el escenario del BIME', notice: 'Este pasaporte acredita a su titular como constructor de proyectos. Pasa las páginas desde la esquina o con las flechas.',
-      visasHint: 'Siete proyectos, en orden. Toca un sello y el pasaporte se abre por su visado.', whatLabel: 'Qué es · What it is',
-      pickStamp: 'Elige un sello de la página izquierda y se estampa aquí.',
-      routeTitle: 'RUTA · ROUTE', routeA: 'Dónde he vivido y estudiado.', routeB: 'Dónde he trabajado en proyectos LEINN.',
-      valuesTitle: 'OBSERVACIONES', skillsTitle: 'ENDOSOS · SKILLS',
-      offDuty: 'Fuera de los proyectos: entrenamiento de fuerza (powerlifting) y K1 / Muay Thai con objetivo de competir.',
-      contactTitle: '¿Hablamos?', baseLabel: 'Base', pdf: 'Descargar versión PDF',
-      thanks: 'Gracias', backLine: 'Fin del pasaporte. Gracias por recorrerlo.', backBtn: 'Volver a la portada',
-      tip: 'Mueve el ratón sobre el pasaporte · pasa página desde la esquina',
-      tabs: ['Portada', 'Datos', 'Visados', 'Proyectos', 'Ruta', 'Contacto']
-    } : {
-      tagline: 'I build projects between digital and physical work. 4th year of LEINN at Mondragon Team Academy.',
-      openHint: 'Turn the cover to open it', pagesLabel: 'Pages', prev: 'Previous', next: 'Next',
-      intro: 'Four years, seven projects, one passport.',
-      introBody: 'Drone-based training, logistics, software for musicians and projects in Berlin, New York, India and Seoul. Every visa is a project I worked on, built or led.',
-      seeVisas: 'Go to my visas', polaroid: 'BIME Startup', photoAlt: 'Pitching RENAME on the BIME stage', notice: 'This passport certifies its holder as a project builder. Turn the pages from the corner or with the arrows.',
-      visasHint: 'Seven projects, in order. Tap a stamp and the passport opens at its visa.', whatLabel: 'What it is · Qué es',
-      pickStamp: 'Pick a stamp on the left page and it gets printed here.',
-      routeTitle: 'ROUTE · RUTA', routeA: 'Where I have lived and studied.', routeB: 'Where I have worked on LEINN projects.',
-      valuesTitle: 'REMARKS', skillsTitle: 'ENDORSEMENTS · SKILLS',
-      offDuty: 'Outside projects: strength training (powerlifting) and K1 / Muay Thai, training to compete.',
-      contactTitle: 'Shall we talk?', baseLabel: 'Base', pdf: 'Download PDF version',
-      thanks: 'Thank you', backLine: 'End of the passport. Thanks for travelling through it.', backBtn: 'Back to the cover',
-      tip: 'Move your mouse over the passport · turn pages from the corner',
-      tabs: ['Cover', 'Data', 'Visas', 'Projects', 'Route', 'Contact']
-    };
-    const BL = {"foto": "assets/foto.jpg", "ascend": "assets/ascend-logo.png", "bilbo": "assets/bilbodrones-logo.png", "plano": "assets/drone-plano.jpg", "dosier": "assets/posta-dosier.jpg", "postaiso": "assets/posta-iso.png", "renameiso": "assets/rename-iso.png", "renamelogo": "assets/rename-logo.png", "renameapp": "assets/rename-app.jpg", "rivia": "assets/rivia-logo.png", "grupo": "assets/ascend-grupo.jpg", "bimecartel": "assets/bime-cartel.jpg", "asett": "assets/asett-portada.jpg", "bilbofoto": "assets/bilbo-foto-anon.jpg"};
-    const PROJ = [{"id": "auto", "name": "AUTOMODELL", "ink": "#A8431A", "fig": "#A8431A", "shape": "oval", "x": 0, "y": 6, "r": -5, "size": 19, "stampSize": 34, "dateEs": "Berlín", "dateEn": "Berlin", "es": {"kind": "Visado · Berlín", "role": "Ventas, clientes y coordinación del equipo", "what": "Creamos y vendimos réplicas en maqueta de coches de alta gama, hechas a medida para cada cliente.", "figs": [["A medida", "una maqueta por cliente"]], "note": "", "problem": "Quien tiene un coche de alta gama quiere una réplica de su coche, no una maqueta genérica de tienda.", "steps": ["Réplicas en maqueta de los coches de cada cliente, a medida.", "Búsqueda de clientes y venta directa en Berlín.", "Coordinación del equipo entre pedidos, producción y entregas."], "myrole": "Me encargué de las ventas y del trato con los clientes, y de coordinar al equipo.", "result": "Validamos la idea: creamos y vendimos las primeras maquetas a clientes reales.", "learn": "Mi primer contacto con un mercado y un público de fuera: no basta con saber ofrecer, hay que saber ofrecer a otra cultura, en otro idioma y a otro tipo de persona."}, "en": {"kind": "Visa · Berlin", "role": "Sales, clients and team coordination", "what": "We built and sold scale-model replicas of high-end cars, custom-made for each client.", "figs": [["Custom", "one model per client"]], "note": "", "problem": "Owners of high-end cars want a replica of their own car, not a generic shop model.", "steps": ["Custom scale-model replicas of each client's car.", "Finding clients and selling directly in Berlin.", "Coordinating the team across orders, production and deliveries."], "myrole": "I handled sales and client relationships, and coordinated the team.", "result": "We validated the idea: we built and sold the first models to real clients.", "learn": "My first contact with a foreign market and audience: it isn't enough to know how to sell, you have to sell to another culture, in another language, to a different kind of person."}}, {"id": "bilbo", "name": "BILBO DRONES", "ink": "#2C3233", "fig": "#2C3233", "shape": "oval", "x": 154, "y": 0, "r": 6, "size": 18, "stampSize": 26, "logo": "bilbo", "logoH": 44, "iso": "bilbo", "isoH": 14, "date": "2023–24", "es": {"kind": "Visado de formación", "role": "Diseño e imparto cursos", "what": "Cursos de dron para niños y colegios en mi primer año de LEINN: los diseñaba y los daba yo.", "figs": [["1.º", "año de carrera"]], "note": "", "problem": "La tecnología llega a los colegios como teoría; los niños aprenden STEAM cuando la tocan y se divierten.", "steps": ["Diseño de cursos de dron para niños y colegios.", "Clases prácticas con la diversión como principio y el dron como herramienta.", "Mi primera experiencia formando a un grupo."], "myrole": "Diseñaba los cursos y los impartía.", "result": "Cursos impartidos durante mi primer año de LEINN.", "learn": "A gestionar por primera vez un proyecto con clientes reales y recurrentes, y a centrarme en cuidar al cliente."}, "en": {"kind": "Training visa", "role": "I design and teach courses", "what": "Drone courses for children and schools in my first year of LEINN: I designed and taught them.", "figs": [["1st", "year of my degree"]], "note": "", "problem": "Technology reaches schools as theory; children learn STEAM when they get hands-on and have fun.", "steps": ["Designing drone courses for children and schools.", "Hands-on classes, with fun as the principle and the drone as the tool.", "My first experience teaching a group."], "myrole": "I designed the courses and taught them.", "result": "Courses taught during my first year of LEINN.", "learn": "How to run a project with real, recurring clients for the first time, and to focus on looking after the client."}, "paste": "bilbofoto", "pw": 180, "pr": 4}, {"id": "coop", "name": "VIVIENDA COOP", "ink": "#1F4A9C", "fig": "#1F4A9C", "shape": "rect", "x": 316, "y": 22, "r": -7, "size": 19, "stampSize": 26, "dateEs": "Nueva York", "dateEn": "New York", "es": {"kind": "Visado · Nueva York", "role": "Investigación, análisis y presentación", "what": "Estudio de mercado sobre la vivienda cooperativa en Estados Unidos y el País Vasco, para un grupo de empresas y asociaciones del sector.", "figs": [["ASSET", "presentado en Donostia"]], "note": "", "problem": "Un grupo de empresas y asociaciones del sector de la vivienda cooperativa necesitaba saber qué funciona en EE. UU. y qué puede trasladarse al País Vasco.", "steps": ["Investigación y entrevistas sobre el modelo cooperativo en Nueva York.", "Análisis comparado entre Estados Unidos y el País Vasco.", "Presentación de las conclusiones en el evento ASSET, en Donostia."], "myrole": "Investigación y entrevistas, análisis comparado y presentación en ASSET.", "result": "Estudio entregado y presentado ante las empresas y asociaciones del sector en ASSET.", "learn": "A moverme en un contexto nuevo creando relaciones por el camino, y a cuidarlas para que duren."}, "en": {"kind": "Visa · New York", "role": "Research, analysis and presentation", "what": "Market study on cooperative housing in the United States and the Basque Country, for a cohort of companies and associations in the sector.", "figs": [["ASSET", "presented in Donostia"]], "note": "", "problem": "A cohort of cooperative-housing companies and associations needed to know what works in the US and what could be brought to the Basque Country.", "steps": ["Research and interviews on the cooperative model in New York.", "Comparative analysis between the United States and the Basque Country.", "Presenting the findings at the ASSET event in Donostia."], "myrole": "Research and interviews, comparative analysis and the presentation at ASSET.", "result": "Study delivered and presented to the sector's companies and associations at ASSET.", "learn": "How to move in a new context, building relationships along the way, and to look after them so they last."}, "paste": "asett", "pw": 230, "pr": 3}, {"id": "ascend", "name": "ASCEND", "ink": "#0D6BB5", "fig": "#0D6BB5", "shape": "round", "x": 10, "y": 168, "r": -8, "size": 22, "stampSize": 30, "logo": "ascend", "logoH": 64, "iso": "ascend", "isoH": 20, "paste": "grupo", "pw": 240, "pr": 3, "date": "2025 →", "es": {"kind": "Visado de fundador", "role": "Fundador y director, con María Ruiz Ramos", "what": "Programa experiencial de liderazgo y soft skills con drones para jóvenes de 15 a 25 años. Lo llevamos a India y Seúl para abrir mercado.", "figs": [["+400", "jóvenes formados"], ["+5", "colaboradores"]], "note": "Ciclo 5E: engage, explore, explain, elaborate, evaluate", "problem": "Los jóvenes llegan al mundo laboral sin las habilidades que más piden las empresas: trabajar en equipo, comunicar y decidir bajo presión. La formación teórica no las entrena ni las evalúa.", "steps": ["Descubrimiento: cada participante identifica su rol de equipo (Belbin) y se forman equipos equilibrados ante un reto real de su entorno.", "Construcción: cada equipo monta su dron desde cero y lo adapta al reto, con pruebas de vuelo intermedias.", "Competición y reflexión: carrera de vuelo, pitch de la solución y retrospectiva Post-Motorola."], "myrole": "Fundé el programa y lo dirijo con María: diseñamos la metodología, facilitamos las sesiones y buscamos centros, también en India y Seúl.", "result": "Más de 400 jóvenes formados, 5 colaboradores y un kit del programa en inglés para Seúl 2026: 3 sesiones de 1,5 h para grupos de 20 a 30.", "learn": "A coger un proyecto que funcionaba, Bilbo Drones, profesionalizarlo y darle el contexto profesional que merece."}, "en": {"kind": "Founder visa", "role": "Founder and director, with María Ruiz Ramos", "what": "Experiential leadership and soft-skills programme using drones, for young people aged 15 to 25. We took it to India and Seoul to open new markets.", "figs": [["+400", "young people trained"], ["+5", "partners"]], "note": "5E cycle: engage, explore, explain, elaborate, evaluate", "problem": "Young people reach the job market without the skills companies ask for most: teamwork, communication and deciding under pressure. Theory-based training neither builds nor assesses them.", "steps": ["Discovery: each participant finds their team role (Belbin) and balanced teams take on a real local challenge.", "Build: each team assembles its drone from scratch and adapts it to the challenge, with test flights along the way.", "Compete and reflect: a flight race, a pitch of the solution and a Post-Motorola retrospective."], "myrole": "I founded the programme and run it with María: we design the method, facilitate the sessions and look for schools, including in India and Seoul.", "result": "Over 400 young people trained, 5 partners and an English programme kit for Seoul 2026: 3 sessions of 1.5 h for groups of 20 to 30.", "learn": "How to take a project that worked, Bilbo Drones, professionalise it and give it the professional context it deserves."}}, {"id": "posta", "name": "POSTA", "ink": "#0E0E10", "fig": "#4D7C0F", "shape": "rect", "x": 160, "y": 178, "r": 6, "size": 26, "stampSize": 34, "wordmark": true, "iso": "postaiso", "isoH": 26, "paste": "dosier", "pw": 150, "pr": 4, "date": "2025 →", "es": {"kind": "Visado de negocio", "role": "Fundador", "what": "Consultoría de reparto y logística para restaurantes: flota propia con capas de respaldo e ingresos recurrentes B2B.", "figs": [["0 %", "pedidos caídos"], ["+11 %", "margen recuperado al mes"], ["−62 %", "reseñas malas (menos de 3 estrellas)"]], "note": "Dosier de ventas 2026", "problem": "Glovo, Uber Eats y Just Eat se quedan entre un 25 y un 35 % de cada pedido, y el restaurante no controla quién ni cómo entrega su comida.", "steps": ["Tres capas de reparto: flota propia (85 %), flota local de respaldo (10 %) y Uber Direct como red de seguridad (5 %).", "Integración con Last.app y Lymon, nuestros distribuidores oficiales, para que cada pedido entre y se asigne solo.", "MVP en Lock Burger: validado en una cocina real, con pedidos reales."], "myrole": "Fundador. Soy el que entra al restaurante, lo escucha, lo cuida y le pone marca a todo.", "result": "0 % de pedidos caídos, +11 % de margen recuperado al mes y −62 % de reseñas malas. Empezamos por Bilbao.", "learn": "A hacer consultoría y a entender el sector de la hostelería."}, "en": {"kind": "Business visa", "role": "Founder", "what": "Delivery and logistics consulting for restaurants: own fleet with backup layers and recurring B2B revenue.", "figs": [["0 %", "dropped orders"], ["+11 %", "margin recovered per month"], ["−62 %", "bad reviews (under 3 stars)"]], "note": "2026 sales deck", "problem": "Glovo, Uber Eats and Just Eat take 25 to 35 % of every order, and the restaurant has no control over who delivers its food or how.", "steps": ["Three delivery layers: own fleet (85 %), local backup fleet (10 %) and Uber Direct as a safety net (5 %).", "Integration with Last.app and Lymon, our official distributors, so every order comes in and is assigned automatically.", "MVP at Lock Burger: validated in a real kitchen, with real orders."], "myrole": "Founder. I'm the one who walks into the restaurant, listens, looks after it and puts a brand on everything.", "result": "0 % dropped orders, +11 % margin recovered per month and −62 % bad reviews. We started in Bilbao.", "learn": "How to do consulting and to understand the hospitality sector."}}, {"id": "rename", "name": "RENAME", "ink": "#391AC4", "fig": "#391AC4", "shape": "oval", "x": 302, "y": 168, "r": -4, "size": 24, "stampSize": 30, "logo": "renamelogo", "logoH": 52, "iso": "renameiso", "isoH": 26, "paste": "bimecartel", "pw": 140, "pr": -4, "date": "2026 →", "es": {"kind": "Visado de producto", "role": "Fundador", "what": "Software de gestión financiera para músicos emergentes: une sus ingresos y sus lanzamientos en un solo panel.", "figs": [["BIME", "finalistas de BIME Startup"], ["5 min", "para saber cuánto has ganado y cuándo cobras"]], "note": "Finalistas BIME Startup", "problem": "El artista independiente hispanohablante con 50.000 a 150.000 oyentes mensuales cobra de más de 8 fuentes que nadie une, y entre un 20 y un 50 % de los royalties no se paga bien.", "steps": ["Investigación del mercado y de cuatro perfiles de artista: pop, urbano, rap y electrónica.", "Diseño del producto: un panel que une Spotify, DistroKid, SGAE, bolos y marcas, y muestra lo ganado, lo pendiente y cuándo se cobra.", "Demo funcional y pitch en BIME Startup, en Bilbao."], "myrole": "Fundador: defino el producto, construyo la demo y lo presento.", "result": "Finalistas de BIME Startup 2026. Siguiente paso: un piloto real con artistas.", "learn": "A pasar de una idea de software a una realidad digital: cómo se construye un producto, paso a paso."}, "en": {"kind": "Product visa", "role": "Founder", "what": "Financial management software for emerging musicians: it brings their income and releases into a single dashboard.", "figs": [["BIME", "BIME Startup finalists"], ["5 min", "to know what you earned and when you get paid"]], "note": "BIME Startup finalists", "problem": "Independent Spanish-speaking artists with 50,000 to 150,000 monthly listeners get paid from 8+ sources nobody brings together, and 20 to 50 % of royalties are paid incorrectly.", "steps": ["Market research and four artist profiles: pop, urban, rap and electronic.", "Product design: a dashboard that joins Spotify, DistroKid, SGAE, gigs and brand deals, and shows what is earned, what is pending and when it gets paid.", "Working demo and pitch at BIME Startup, in Bilbao."], "myrole": "Founder: I define the product, build the demo and pitch it.", "result": "BIME Startup 2026 finalists. Next step: a real pilot with artists.", "learn": "How to turn a software idea into a digital reality: how a product gets built, step by step."}}, {"id": "rivia", "name": "RIVIA", "ink": "#33373D", "fig": "#33373D", "shape": "rect", "x": 150, "y": 332, "r": 3, "size": 26, "stampSize": 34, "date": "2023 →", "es": {"kind": "Residencia de equipo", "role": "Bienestar y comunicación", "what": "Nuestra junior empresa de LEINN: un equipo que lanza proyectos reales al mercado.", "figs": [["14", "personas en el equipo"]], "note": "", "problem": "En LEINN se aprende emprendiendo de verdad: hace falta una empresa real donde un equipo facture, se equivoque y crezca junto.", "steps": ["Montamos Rivia al entrar en LEINN, en 2023.", "Lanzamos proyectos al mercado desde el equipo: de aquí salen ASCEND y POSTA.", "Nos dimos método propio: el Método RIVIA de negociación y un marco común de bienestar."], "myrole": "Llevo bienestar y comunicación: el cuidado del equipo por dentro y su voz hacia fuera. Preparé parte del Método RIVIA de negociación.", "result": "Un equipo de 14 personas que sigue lanzando proyectos al mercado.", "learn": "A liderar y gestionar un equipo: sobre todo, la gestión de personas y de proyectos."}, "en": {"kind": "Team residence", "role": "Wellbeing and communication", "what": "Our LEINN junior company: a team that takes real projects to market.", "figs": [["14", "people on the team"]], "note": "", "problem": "At LEINN you learn by actually starting businesses: you need a real company where a team bills, makes mistakes and grows together.", "steps": ["We set up Rivia when we started LEINN, in 2023.", "We take projects to market as a team: ASCEND and POSTA come from here.", "We built our own methods: the RIVIA negotiation method and a shared wellbeing framework."], "myrole": "I run wellbeing and communication: looking after the team inside and being its voice outside. I prepared part of the RIVIA negotiation method.", "result": "A 14-person team that keeps taking projects to market.", "learn": "How to lead and manage a team: above all, managing people and projects."}, "logo": "rivia", "logoH": 40}];
-    const P = PROJ.map(p => { const L = es ? p.es : p.en; return Object.assign({}, p, L, {
-      date: p.date || (es ? p.dateEs : p.dateEn), iso: p.iso ? BL[p.iso] : '', isoH: p.isoH || 0,
-      logoUrl: p.logo ? BL[p.logo] : '', hasLogo: !!p.logo, wordmark: !!p.wordmark, logoH: p.logoH || 56,
-      pasteUrl: p.paste ? BL[p.paste] : '', hasPaste: !!p.paste, hasNote: !!L.note, learn: L.learn || '',
-      figsL: L.figs.map(f => ({ v: f[0], l: f[1] })), stepsL: L.steps.map((t, j) => ({ n: '0' + (j + 1), t })) }); });
-    const sel = P.find(p => p.id === s.sel) || null;
-    const routeA = [
-      { city: 'Denver', when: '—', note: es ? 'Nací aquí (EE. UU.)' : 'Born here (USA)', ink: '#1F4A9C', r: -3 },
-      { city: 'Gijón', when: '—', note: es ? 'Crecí en Asturias' : 'Grew up in Asturias', ink: '#B3261E', r: 2 },
-      { city: es ? 'Inglaterra' : 'England', when: 'ESO', note: es ? 'Intercambio' : 'Exchange', ink: '#4B3A9E', r: -2 },
-      { city: 'Bilbao', when: '2023 →', note: es ? 'Base · LEINN' : 'Base · LEINN', ink: '#1D6B45', r: 3 }
-    ];
-    const routeB = [
-      { city: es ? 'Berlín' : 'Berlin', when: '—', note: es ? 'Automodell: maquetas de coches a medida' : 'Automodell: custom car models', ink: '#2B2B2B', r: -4 },
-      { city: es ? 'Nueva York' : 'New York', when: '—', note: es ? 'Estudio de vivienda cooperativa' : 'Cooperative housing study', ink: '#1F4A9C', r: 2 },
-      { city: 'India', when: '—', note: es ? 'ASCEND: abrir mercado de formaciones' : 'ASCEND: opening a training market', ink: '#A8431A', r: -2 },
-      { city: es ? 'Seúl' : 'Seoul', when: '—', note: es ? 'ASCEND: abrir mercado de formaciones' : 'ASCEND: opening a training market', ink: '#B3261E', r: 4 }
-    ];
-    const values = es ? [
-      { name: 'Hacer, no solo plantear', line: 'Cada proyecto de este pasaporte está en marcha o lo estuvo.' },
-      { name: 'Personas en el centro', line: 'Equipo y cliente primero; de ahí sale todo lo demás.' },
-      { name: 'Aprender en terreno', line: 'De la idea abstracta a la respuesta útil, probando.' },
-      { name: 'Directo y honesto', line: 'Relaciones cercanas, cifras reales.' }
-    ] : [
-      { name: 'Build, not just pitch', line: 'Every project in this passport is running or has run.' },
-      { name: 'People first', line: 'Team and client first; everything else follows.' },
-      { name: 'Learn in the field', line: 'From the abstract idea to the useful answer, by testing.' },
-      { name: 'Direct and honest', line: 'Close relationships, real numbers.' }
-    ];
-    const inks = ['#1F4A9C', '#B3261E', '#1D6B45', '#4B3A9E', '#2B2B2B', '#A8431A'];
-    const skillNames = es ? ['Liderazgo de equipos', 'Formación con drones', 'Pilotaje y vídeo con dron', 'Herramientas digitales para empresas', 'Modelo de negocio', 'Comunicación', 'Gestión de personas', 'Design Thinking'] : ['Team leadership', 'Drone-based training', 'Drone piloting and video', 'Digital tools for businesses', 'Business modelling', 'Communication', 'People management', 'Design Thinking'];
-    const skills = skillNames.map((n, i) => ({ name: n, ink: inks[i % inks.length], r: [-3, 2, -1, 3, -2, 1, -3, 2][i] }));
-
-    // pages of the booklet: even index = right-hand page, odd index = left-hand page
-    const PAGES = ['cover', 'inside', 'datos', 'visas', 'valores'].concat(...P.map((p, i) => ['v' + i, 'r' + i])).concat(['rutaA', 'rutaB', 'skills', 'contacto', 'back']);
-    const narrow = s.vw < 900;
-    const MAXK = Math.ceil((PAGES.length - 1) / 2), MAXI = PAGES.length - 1;
-    const page = (idx, side, extra) => {
-      const id = PAGES[idx];
-      if (id === undefined) return { show: false };
-      const paper = id !== 'cover' && id !== 'back';
-      const left = side === 'L';
-      return Object.assign({
-        show: true, id,
-        isCover: id === 'cover', isInside: id === 'inside', isDatos: id === 'datos', isVisas: id === 'visas', isVisa: /^v\d$/.test(id), isReport: /^r\d$/.test(id), p: /^[vr]\d$/.test(id) ? P[+id.slice(1)] : P[0],
-        isRuta: id === 'rutaA' || id === 'rutaB', route: id === 'rutaA' ? routeA : routeB, routeHint: id === 'rutaA' ? T.routeA : T.routeB,
-        isValores: id === 'valores', isSkills: id === 'skills', isContacto: id === 'contacto', isBack: id === 'back', isBlank: id === 'blank',
-        paperCls: 'paper ' + (left ? 'spineL' : 'spineR'),
-        num: paper ? String(idx).padStart(2, '0') : '',
-        rad: left ? '14px 0 0 14px' : '0 14px 14px 0',
-        x: left ? 0 : (narrow ? 0 : 520), cls: 'slot', faceCls: 'face', shadeCls: 'none', shadeBg: 'transparent'
-      }, extra || {});
-    };
-    const sideOf = idx => (narrow ? 'R' : (idx % 2 === 0 ? 'R' : 'L'));
-    const none = { show: false };
-    const darkR = 'linear-gradient(90deg, rgba(0,0,0,.38), rgba(0,0,0,.08) 60%, rgba(0,0,0,0))';
-    const darkL = 'linear-gradient(270deg, rgba(0,0,0,.38), rgba(0,0,0,.08) 60%, rgba(0,0,0,0))';
-    let slots, k = s.k, f = s.flip;
-    if (!narrow) {
-      const L = kk => (kk >= 1 ? 2 * kk - 1 : -1), R = kk => 2 * kk;
-      if (!f) slots = [page(L(k), 'L'), page(R(k), 'R'), none, none];
-      else if (f.dir === 'next') slots = [
-        page(L(k), 'L'), page(R(f.to), 'R', { shadeCls: 'cast', shadeBg: darkR }),
-        page(R(k), 'R', { cls: 'slot leafR flipNext', faceCls: 'face', shadeCls: 'shadeF', shadeBg: 'linear-gradient(270deg, rgba(0,0,0,.28), rgba(0,0,0,0) 70%)' }),
-        page(L(f.to), 'L', { x: 520, cls: 'slot leafR flipNext', faceCls: 'face faceBack', shadeCls: 'shadeB', shadeBg: 'linear-gradient(90deg, rgba(0,0,0,.3), rgba(0,0,0,0) 70%)' })
-      ];
-      else slots = [
-        page(L(f.to), 'L', { shadeCls: 'cast', shadeBg: darkL }), page(R(k), 'R'),
-        page(L(k), 'L', { cls: 'slot leafL flipPrev', faceCls: 'face', shadeCls: 'shadeF', shadeBg: 'linear-gradient(90deg, rgba(0,0,0,.28), rgba(0,0,0,0) 70%)' }),
-        page(R(f.to), 'R', { x: 0, cls: 'slot leafL flipPrev', faceCls: 'face faceBack', shadeCls: 'shadeB', shadeBg: 'linear-gradient(270deg, rgba(0,0,0,.3), rgba(0,0,0,0) 70%)' })
-      ];
-    } else {
-      const i = s.i;
-      if (!f) slots = [page(i, 'R'), none, none, none];
-      else if (f.dir === 'next') slots = [page(f.to, 'R', { shadeCls: 'cast', shadeBg: darkR }), none, page(i, 'R', { cls: 'slot leafR flipNextN', shadeCls: 'shadeF', shadeBg: 'linear-gradient(270deg, rgba(0,0,0,.28), rgba(0,0,0,0) 70%)' }), none];
-      else slots = [page(i, 'R'), none, page(f.to, 'R', { cls: 'slot leafR flipInN' }), none];
-    }
-    const cur = narrow ? s.i : s.k, max = narrow ? MAXI : MAXK;
-    const flipTo = to => {
-      if (this.state.flip || to === cur || to < 0 || to > max) return;
-      this.setState({ flip: { to, dir: to > cur ? 'next' : 'prev' } });
-      setTimeout(() => this.setState(narrow ? { i: to, flip: null } : { k: to, flip: null }), narrow ? 860 : 960);
-    };
-    const tabTargets = narrow ? [0, 2, 3, 5, 19, 22] : [0, 1, 2, 3, 10, 11];
-    const activeK = narrow ? Math.ceil(s.i / 2) : s.k;
-    const activeTab = [0, 1, 2, 3, 10, 11].reduce((acc, t, j) => (activeK >= t ? j : acc), 0);
-    const closed = !narrow && s.k === 0 && !(f && f.dir === 'next');
-    const backClosed = !narrow && s.k === MAXK && !(f && f.dir === 'prev');
-    const scale = Math.min(1, ((narrow ? Math.min(s.vw, 560) : s.vw) - 40) / (narrow ? 520 : 1040));
-    const bookW = narrow ? 520 : 1040;
-    const edgesR = [3, 6, 9].map((o, j) => ({ x: (narrow ? 0 : 520) + o, y: o * .6, z: -2 - j * 2, rad: '0 14px 14px 0', bg: j === 2 ? '#8E2A3B' : '#D3DED5' }));
-    const edgesL = [3, 6, 9].map((o, j) => ({ x: -o, y: o * .6, z: -2 - j * 2, rad: '14px 0 0 14px', bg: j === 2 ? '#8E2A3B' : '#D3DED5' }));
-    const showLeftEdges = !narrow && (s.k > 0 || (f && f.dir === 'next'));
-    const onMove = e => {
-      const r = e.currentTarget.getBoundingClientRect();
-      const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
-      cancelAnimationFrame(this.raf);
-      this.raf = requestAnimationFrame(() => this.setState({ hover: true, ty: (px - .5) * 18, tx: -(py - .5) * 12, gx: Math.round(px * 100), gy: Math.round(py * 100) }));
-    };
-    return {
-      t: T, isEs: es, isEn: !es,
-      esCls: 'pill' + (es ? ' on' : ''), enCls: 'pill' + (es ? '' : ' on'),
-      setEs: () => this.setState({ lang: 'es' }), setEn: () => this.setState({ lang: 'en' }),
-      tabs: T.tabs.map((n, j) => ({ label: n, cls: 'pill' + (activeTab === j ? ' on' : ''), go: () => flipTo(tabTargets[j]) })),
-      slots, edges: (backClosed ? [] : edgesR).concat(showLeftEdges ? edgesL : []),
-      stageH: Math.round(680 * scale) + 60, scale, bookW,
-      shift: closed ? -260 : (backClosed ? 260 : 0), glareL: closed && !narrow ? 520 : 0, glareW: narrow ? 520 : (closed || backClosed ? 520 : 1040),
-      shadowL: closed ? 560 : (backClosed ? 40 : 40), shadowW: closed || backClosed ? 440 : 960, shadowX: Math.round(-s.ty * 2),
-      tx: s.hover ? s.tx.toFixed(2) : 4, ty: s.hover ? s.ty.toFixed(2) : -6, gx: s.gx, gy: s.gy,
-      holoX: s.gx, holoY: s.gy,
-      floatCls: s.hover ? 'p3d' : 'p3d float',
-      onMove, onLeave: () => { cancelAnimationFrame(this.raf); this.setState({ hover: false }); },
-      next: () => flipTo(cur + 1), prev: () => flipTo(cur - 1),
-      canNextCorner: !f && cur < max, canPrevCorner: !f && !narrow && cur > 0,
-      cornerRX: narrow ? 442 : 962,
-      counter: narrow ? (s.i + 1) + ' / ' + (MAXI + 1) : (s.k + 1) + ' / ' + (MAXK + 1),
-      goCover: () => flipTo(0),
-      goVisas: () => flipTo(2 * (narrow ? 1 : 0) + (narrow ? 1 : 2)),
-      fields: [
-        { label: 'Apellidos · Surname', value: 'Kamuchey Peón' },
-        { label: 'Nombre · Given names', value: 'Alejandro' },
-        { label: 'Lugar de nacimiento · Place of birth', value: 'Denver, USA' },
-        { label: 'Base · Residence', value: 'Bilbao' },
-        { label: 'Ocupación · Occupation', value: es ? 'Constructor de proyectos · LEINN 4' : 'Project builder · LEINN 4' },
-        { label: 'Idiomas · Languages', value: es ? 'Español · Inglés (nativo)' : 'Spanish · English (native)' }
-      ],
-      stamps: P.map((p, pi) => ({ ...p, hasIso: !!p.iso, on: s.sel === p.id, cls: 'stamp ' + p.shape + (s.sel === p.id ? ' on' : ''),
-        pick: () => flipTo(narrow ? 5 + 2 * pi : 3 + pi) })),
-      thunkCls: s.n % 2 ? 'thunkA' : 'thunkB',
-      sel: Object.assign({ figColor: '#1E2A2A', stampSize: 34, logoH: 56 }, sel || P[0], { hasLogo: !!(sel || P[0]).logo, isPosta: (sel || P[0]).id === 'posta', hasPaste: !!(sel || P[0]).paste, hasNote: !!(sel || P[0]).note, figColor: (sel || P[0]).figColor || (sel || P[0]).ink }), hasSel: !!sel, noSel: !sel,
-      values, skills
-    };
-  }
-}
-
-const { createApp, reactive, computed, onMounted, onBeforeUnmount } = Vue;
-createApp({
-  template: '#tpl',
-  setup() {
-    const c = new Component({});
-    c.state = reactive(c.state);
-    const v = computed(() => c.renderVals());
-    const out = {};
-    for (const k of Object.keys(c.renderVals())) out[k] = computed(() => v.value[k]);
-    onMounted(() => c.componentDidMount && c.componentDidMount());
-    onBeforeUnmount(() => c.componentWillUnmount && c.componentWillUnmount());
-    return out;
-  }
-}).mount('#app');
+(function(){var els=document.querySelectorAll('.reveal');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+els.forEach(function(e){io.observe(e)});})();
 </script>
 </body>
 </html>
