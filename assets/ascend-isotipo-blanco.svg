@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="38 38 950 822" role="img" aria-label="ASCEND"><title>ASCEND</title><g>
+    <polygon fill="#FFFFFF" points="48,860 160,860 388,612 285,602"/>
+    <polygon fill="#FFFFFF" points="220,860 332,860 495,682 418,644"/>
+    <polygon fill="#FFFFFF" points="285,510 414,498 636,256 518,256"/>
+    <polygon fill="#FFFFFF" points="484,492 761,190 686,116 988,38 936,346 853,272 640,502"/>
+    <g fill="#FFFFFF">
+      <ellipse cx="170" cy="550" rx="24" ry="46"/>
+      <ellipse cx="831" cy="562" rx="23" ry="34"/>
+      <path d="M150,546 Q490,506 856,548 L856,566 Q700,566 598,590 Q570,646 490,646 Q418,642 402,590 Q300,570 150,566 Z"/>
+      <path d="M598,594 Q668,626 686,718 L652,718 Q640,652 572,612 Z"/>
+    </g>
+    <path fill="#FFFFFF" d="M184,471 C120,468 42,476 38,494 C36,506 66,516 116,521 C88,513 70,505 76,497 C88,486 136,479 184,478 Z"/>
+    <g fill="none" stroke="#FFFFFF" stroke-linecap="round">
+      <path d="M690,490 C702,477 770,471 830,471" stroke-width="8"/>
+      <path d="M934,482 C966,488 968,500 946,508 C916,517 862,520 814,521" stroke-width="9"/>
+    </g>
+  </g></svg>
